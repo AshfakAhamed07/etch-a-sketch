@@ -42,8 +42,8 @@ h1 {
 }
 
 .gridBtn {
-  background-color: red;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
@@ -53,7 +53,7 @@ h1 {
 }
 
 .gridBtn:hover {
-  background-color: #cc0000;
+  background-color: #cccccc;
 }
 
 .gridBtn:active {

@@ -36,22 +36,28 @@ function handleInput(input) {
   generateGrid(gridSize);
 }
 
-function generateRandomColor(){
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
+function generateRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
 
-    return `rgb(${r}, ${g}, ${b})`
+  return `rgb(${r}, ${g}, ${b})`;
 }
 
 function generateGrid(gridLength) {
   container.innerHTML = "";
   for (let i = 1; i <= gridLength * gridLength; i++) {
     const square = document.createElement("div");
+    square.hoverCount = 0;
+    if(square.hoverCount > 10){
+        return;
+      }
     square.style.width = `${100 / gridLength}%`;
     square.style.height = `${100 / gridLength}%`;
     square.addEventListener("mouseover", function () {
+      square.hoverCount++;
       square.style.backgroundColor = generateRandomColor();
+      square.style.opacity = 1 - square.hoverCount * 0.1;
     });
     square.classList.add("square");
     container.appendChild(square);
