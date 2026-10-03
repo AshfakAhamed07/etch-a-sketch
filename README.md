@@ -2,7 +2,9 @@
 
 A browser-based Etch-a-Sketch project built as part of [The Odin Project](https://www.theodinproject.com/) Foundations course.
 
-The project uses JavaScript to dynamically generate a grid of squares and provides an interactive drawing effect when hovering over the squares.
+## Live Demo
+
+**[View the Etch-a-Sketch](https://ashfakahamed07.github.io/etch-a-sketch/)**
 
 ## Features
 
