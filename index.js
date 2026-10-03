@@ -49,14 +49,17 @@ function generateGrid(gridLength) {
   for (let i = 1; i <= gridLength * gridLength; i++) {
     const square = document.createElement("div");
     square.hoverCount = 0;
-    if(square.hoverCount > 10){
-        return;
-      }
     square.style.width = `${100 / gridLength}%`;
     square.style.height = `${100 / gridLength}%`;
     square.addEventListener("mouseover", function () {
+      if (square.hoverCount >= 10) {
+        return;
+      }
+
       square.hoverCount++;
+
       square.style.backgroundColor = generateRandomColor();
+
       square.style.opacity = 1 - square.hoverCount * 0.1;
     });
     square.classList.add("square");
