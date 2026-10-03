@@ -7,42 +7,60 @@
 body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+main {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  background-color: black;
-  gap: 30px;
-  
+  gap: 25px;
 }
 
 h1 {
+  font-size: 3rem;
   font-weight: 900;
-  color: #ffffff;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  border: 2px solid #ffffff;
   width: 500px;
   height: 500px;
+  border: 3px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
-.square{
-    /* height: 6.25%;
-    width: 6.25%; */
-    background-color: black;
-    border: 2px solid #ffffff;
+.square {
+  background-color: black;
+  border: 1px solid #222;
 }
 
-.gridBtn{
-    background-color: red;
-    color: #ffffff;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 7px;
+.gridBtn {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+}
+
+.gridBtn:hover {
+  background-color: #cc0000;
+}
+
+.gridBtn:active {
+  transform: scale(0.97);
+}
+
+.gridBtn:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
 }
