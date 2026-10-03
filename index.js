@@ -36,6 +36,14 @@ function handleInput(input) {
   generateGrid(gridSize);
 }
 
+function generateRandomColor(){
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    return `rgb(${r}, ${g}, ${b})`
+}
+
 function generateGrid(gridLength) {
   container.innerHTML = "";
   for (let i = 1; i <= gridLength * gridLength; i++) {
@@ -43,7 +51,7 @@ function generateGrid(gridLength) {
     square.style.width = `${100 / gridLength}%`;
     square.style.height = `${100 / gridLength}%`;
     square.addEventListener("mouseover", function () {
-      square.style.backgroundColor = "red";
+      square.style.backgroundColor = generateRandomColor();
     });
     square.classList.add("square");
     container.appendChild(square);
